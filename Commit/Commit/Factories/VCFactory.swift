@@ -7,34 +7,33 @@
 
 import UIKit
 
-final class VCFactory {
+class ViewControllerFactory {
     
-    func initTabBarVC() -> TabBarVC {
-        let vc = TabBarVC()
+    func initTabBarVC() -> TabBarController {
+        let vc = TabBarController()
         return vc
     }
     
-    func initAllDaysVC() -> AllDaysVC {
-        let vc = AllDaysVC()
+    func initAllDaysVC() -> AllDaysController {
+        let vc = AllDaysController()
         vc.title = "all"
         return vc
     }
     
-    func initTodayVC() -> TodayVC {
-        let vc = TodayVC()
+    func initTodayVC() -> TodayController {
+        let vc = TodayController()
         vc.title = "today"
         return vc
     }
     
-    func initSettingsVC() -> SettingsVC {
-        let vc = SettingsVC()
+    func initSettingsVC() -> SettingsController {
+        let vc = SettingsController()
         vc.title = "settings"
         return vc
     }
     
     func initAllHabitsVC() -> AllHabitsVC {
         let vc = AllHabitsVC()
-        vc.title = "habits"
         return vc
     }
     
@@ -43,3 +42,4 @@ final class VCFactory {
         return vc
     }
 }
+

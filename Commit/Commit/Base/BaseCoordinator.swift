@@ -2,47 +2,41 @@
 //  BaseCoordinator.swift
 //  Commit
 //
-//  Created by Alikhan Tangirbergen on 30.03.2024.
+//  Created by Alikhan Tangirbergen on 21.04.2024.
 //
 
 import UIKit
 
-open class BaseCoordinator : ICoordinator {
+class BaseCoordinator: Coordinator {
+  
+  var childCoordinators: [Coordinator] = []
+  
+  func start() {
+      
+  }
+  
+  // add only unique object
+  func addDependency(_ coordinator: Coordinator) {
+    guard !childCoordinators.contains(where: { $0 === coordinator }) else { return }
+    childCoordinators.append(coordinator)
+  }
+  
+  func removeDependency(_ coordinator: Coordinator?) {
+    guard
+      childCoordinators.isEmpty == false,
+      let coordinator = coordinator
+      else { return }
     
-    //MARK: Variables
-    
-    var childCoordinators = [ICoordinator]()
-    var presenter : UINavigationController?
-    var flowCompletionHandler : Callback?
-    var vcFactory : VCFactory
-    var coordinatorFactory : ICoordinatorFactory
-    
-    init(presenter: UINavigationController? = nil, vcFactory: VCFactory, coordinatoFactory: ICoordinatorFactory) {
-        self.presenter = presenter
-        self.vcFactory = VCFactory()
-        self.coordinatorFactory = CoordinatorFactory()
+    // Clear child-coordinators recursively
+    if let coordinator = coordinator as? BaseCoordinator, !coordinator.childCoordinators.isEmpty {
+        coordinator.childCoordinators
+            .filter({ $0 !== coordinator })
+            .forEach({ coordinator.removeDependency($0) })
     }
-    
-    
-    //MARK: Public methods
-    
-    func addDependency(_ coordinator: ICoordinator) {
-        for child in childCoordinators {
-            if child === coordinator { return }
-        }
-        self.childCoordinators.append(coordinator)
+    for (index, element) in childCoordinators.enumerated() where element === coordinator {
+        childCoordinators.remove(at: index)
+        break
     }
-    
-    func removeDependency(_ coordinator: ICoordinator?) {
-        guard childCoordinators.isEmpty == false, let coordinator = coordinator else { return }
-        for (index, child) in childCoordinators.enumerated() {
-            if child === child {
-                self.childCoordinators.remove(at: index)
-            }
-        }
-    }
-    
-    //MARK: ICoordinator
-    
-    func start() {}
+  }
 }
+

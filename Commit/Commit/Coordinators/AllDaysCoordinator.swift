@@ -5,51 +5,38 @@
 //  Created by Alikhan Tangirbergen on 30.03.2024.
 //
 
-import Foundation
+import UIKit
 
-final class AllDaysCoordinator : BaseCoordinator {
-    private let router: IRouter
+final class AllDaysCoordinator : Coordinatable {
+    var flowCompletionHandler: Callback?
+    
     private let coordinatorFactory: ICoordinatorFactory
     private let vcFactory: VCFactory
+    weak var presenter: UINavigationController?
+    var childCoordinators = [Coordinatable]()
     
-    init(router: IRouter, coordinatorFactory: ICoordinatorFactory, vcFactory: VCFactory) {
-        self.router = router
-        self.coordinatorFactory = coordinatorFactory
-        self.vcFactory = vcFactory
+    init(presenter: UINavigationController?) {
+        self.presenter = presenter
+        vcFactory = VCFactory()
+        coordinatorFactory = CoordinatorFactory()
     }
     
-    override func start() {
-        let vc = vcFactory.initAllDaysVC()
-        showAllDaysVC(vc: vc)
+    func start() {
+        showAllDaysVC()
     }
 }
 
 //All VCs of Coordinator
 extension AllDaysCoordinator {
     
-    private func showAllDaysVC(vc : AllDaysVC) {
-        self.router.setRootModule(vc)
-    }
-    
-    private func showAddHabitVC() {
-        let vc = vcFactory.initAddHabitVC()
-        vc.goBack = { [unowned self] in
-            self.router.popModule()
-        }
-        self.router.push(vc)
-    }
-    
-    private func showAllHabitsVC() {
-        let vc = vcFactory.initAllHabitsVC()
-        vc.goBack = { [unowned self] in
-            self.router.popModule()
-        }
-        self.router.push(vc)
+    private func showAllDaysVC() {
+        let vc = vcFactory.initAllDaysVC()
+        self.push(controller: vc, animated: true)
     }
     
     func startAndReturnVC() -> AllDaysVC{
         let vc = self.vcFactory.initAllDaysVC()
-        self.showAllDaysVC(vc: vc)
+        self.showAllDaysVC()
         return vc
     }
 }

@@ -8,24 +8,18 @@
 import UIKit
 
 final class CoordinatorFactory : ICoordinatorFactory {
-    
-    func makeTodayCoordinator(router: IRouter, coordinatorFactory: ICoordinatorFactory, vcFactory: VCFactory) -> TodayCoordinator {
-        let coordinator = TodayCoordinator(router: router, coordinatorFactory: coordinatorFactory, vcFactory: vcFactory)
-        return coordinator
+    func createAllDaysCoordinatorTuple() -> (allDaysCoordinator: AllDaysCoordinator, presenter: UINavigationController) {
+        let presenter = UINavigationController()
+        return (AllDaysCoordinator(presenter: presenter), presenter)
     }
     
-    func makeTabBarCoordinator(router: IRouter, coordinatorFactory: ICoordinatorFactory, vcFactory: VCFactory) -> TabBarCoordinator {
-        let coordinator = TabBarCoordinator(router: router, coordinatorFactory: coordinatorFactory, vcFactory: vcFactory)
-        return coordinator
+    func createTodayCoordinatorTuple() -> (todayCoordinator: TodayCoordinator, presenter: UINavigationController) {
+        <#code#>
     }
     
-    func makeAllDaysCoordinator(router: IRouter, coordinatorFactory: ICoordinatorFactory, vcFactory: VCFactory) -> AllDaysCoordinator {
-        let coordinator = AllDaysCoordinator(router: router, coordinatorFactory: coordinatorFactory, vcFactory: vcFactory)
-        return coordinator
+    func createSettingsCoordinatorTuple() -> (settingsCoordinator: SettingsCoordinator, presenter: UINavigationController) {
+        <#code#>
     }
     
-    func makeSettingsCoordinator(router: IRouter, coordinatorFactory: ICoordinatorFactory, vcFactory: VCFactory) -> SettingsCoordinator {
-        let coordinator = SettingsCoordinator(router: router, coordinatorFactory: coordinatorFactory, vcFactory: vcFactory)
-        return coordinator
-    }
+    
 }

@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A788DB22BD543B100970507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DB12BD543B100970507 /* AppDelegate.swift */; };
+		7A788DBC2BD543B100970507 /* CommitClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DBA2BD543B100970507 /* CommitClone.xcdatamodeld */; };
+		7A788DBE2BD543B300970507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A788DBD2BD543B300970507 /* Assets.xcassets */; };
+		7A788DC12BD543B300970507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A788DBF2BD543B300970507 /* LaunchScreen.storyboard */; };
+		7A788DCC2BD543B300970507 /* CommitCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DCB2BD543B300970507 /* CommitCloneTests.swift */; };
+		7A788DD62BD543B300970507 /* CommitCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DD52BD543B300970507 /* CommitCloneUITests.swift */; };
+		7A788DD82BD543B300970507 /* CommitCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DD72BD543B300970507 /* CommitCloneUITestsLaunchTests.swift */; };
+		7A788DE62BD5445400970507 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DE52BD5445400970507 /* ApplicationCoordinator.swift */; };
+		7A788DE92BD5447800970507 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DE82BD5447800970507 /* Protocol.swift */; };
+		7A788DEB2BD5448D00970507 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DEA2BD5448D00970507 /* Presentable.swift */; };
+		7A788DED2BD544AE00970507 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DEC2BD544AE00970507 /* BaseView.swift */; };
+		7A788DF02BD544CB00970507 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DEF2BD544CB00970507 /* Router.swift */; };
+		7A788DF22BD544DB00970507 /* RouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DF12BD544DB00970507 /* RouterImp.swift */; };
+		7A788DF82BD5454300970507 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DF72BD5454300970507 /* CoordinatorFactory.swift */; };
+		7A788DFA2BD5458000970507 /* SettingsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DF92BD5458000970507 /* SettingsModuleFactory.swift */; };
+		7A788DFC2BD5458B00970507 /* AllDaysModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DFB2BD5458B00970507 /* AllDaysModuleFactory.swift */; };
+		7A788DFE2BD5459300970507 /* TodayModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DFD2BD5459300970507 /* TodayModuleFactory.swift */; };
+		7A788E002BD5460600970507 /* CoordinatorFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DFF2BD5460600970507 /* CoordinatorFactoryImp.swift */; };
+		7A788E022BD546BD00970507 /* ModuleFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E012BD546BD00970507 /* ModuleFactoryImp.swift */; };
+		7A788E052BD546E800970507 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E042BD546E800970507 /* BaseCoordinator.swift */; };
+		7A788E092BD5471F00970507 /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E082BD5471F00970507 /* TabbarCoordinator.swift */; };
+		7A788E0B2BD5473400970507 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E0A2BD5473400970507 /* TabbarView.swift */; };
+		7A788E0D2BD5474900970507 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E0C2BD5474900970507 /* TabbarController.swift */; };
+		7A788E122BD5479300970507 /* AllDaysCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E112BD5479300970507 /* AllDaysCoordinator.swift */; };
+		7A788E142BD5479C00970507 /* AllDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E132BD5479C00970507 /* AllDaysView.swift */; };
+		7A788E162BD547A300970507 /* AllDaysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E152BD547A300970507 /* AllDaysController.swift */; };
+		7A788E182BD548B200970507 /* TodayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E172BD548B200970507 /* TodayCoordinator.swift */; };
+		7A788E1A2BD548B800970507 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E192BD548B800970507 /* TodayView.swift */; };
+		7A788E1C2BD548BF00970507 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E1B2BD548BF00970507 /* TodayController.swift */; };
+		7A788E1E2BD548C700970507 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E1D2BD548C700970507 /* SettingsView.swift */; };
+		7A788E202BD548D100970507 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E1F2BD548D100970507 /* SettingsController.swift */; };
+		7A788E222BD548D800970507 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E212BD548D800970507 /* SettingsCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A788DC82BD543B300970507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A788DA62BD543B100970507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A788DAD2BD543B100970507;
+			remoteInfo = CommitClone;
+		};
+		7A788DD22BD543B300970507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A788DA62BD543B100970507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A788DAD2BD543B100970507;
+			remoteInfo = CommitClone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7A788DAE2BD543B100970507 /* CommitClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A788DB12BD543B100970507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A788DBB2BD543B100970507 /* CommitClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommitClone.xcdatamodel; sourceTree = "<group>"; };
+		7A788DBD2BD543B300970507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A788DC02BD543B300970507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A788DC22BD543B300970507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A788DC72BD543B300970507 /* CommitCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommitCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A788DCB2BD543B300970507 /* CommitCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCloneTests.swift; sourceTree = "<group>"; };
+		7A788DD12BD543B300970507 /* CommitCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommitCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A788DD52BD543B300970507 /* CommitCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCloneUITests.swift; sourceTree = "<group>"; };
+		7A788DD72BD543B300970507 /* CommitCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A788DE52BD5445400970507 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		7A788DE82BD5447800970507 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		7A788DEA2BD5448D00970507 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		7A788DEC2BD544AE00970507 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		7A788DEF2BD544CB00970507 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7A788DF12BD544DB00970507 /* RouterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
+		7A788DF72BD5454300970507 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		7A788DF92BD5458000970507 /* SettingsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleFactory.swift; sourceTree = "<group>"; };
+		7A788DFB2BD5458B00970507 /* AllDaysModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDaysModuleFactory.swift; sourceTree = "<group>"; };
+		7A788DFD2BD5459300970507 /* TodayModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModuleFactory.swift; sourceTree = "<group>"; };
+		7A788DFF2BD5460600970507 /* CoordinatorFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryImp.swift; sourceTree = "<group>"; };
+		7A788E012BD546BD00970507 /* ModuleFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryImp.swift; sourceTree = "<group>"; };
+		7A788E042BD546E800970507 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		7A788E082BD5471F00970507 /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
+		7A788E0A2BD5473400970507 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		7A788E0C2BD5474900970507 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		7A788E112BD5479300970507 /* AllDaysCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDaysCoordinator.swift; sourceTree = "<group>"; };
+		7A788E132BD5479C00970507 /* AllDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDaysView.swift; sourceTree = "<group>"; };
+		7A788E152BD547A300970507 /* AllDaysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDaysController.swift; sourceTree = "<group>"; };
+		7A788E172BD548B200970507 /* TodayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoordinator.swift; sourceTree = "<group>"; };
+		7A788E192BD548B800970507 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		7A788E1B2BD548BF00970507 /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
+		7A788E1D2BD548C700970507 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7A788E1F2BD548D100970507 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		7A788E212BD548D800970507 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A788DAB2BD543B100970507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A788DC42BD543B300970507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A788DCE2BD543B300970507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A788DA52BD543B100970507 = {
+			isa = PBXGroup;
+			children = (
+				7A788DB02BD543B100970507 /* CommitClone */,
+				7A788DCA2BD543B300970507 /* CommitCloneTests */,
+				7A788DD42BD543B300970507 /* CommitCloneUITests */,
+				7A788DAF2BD543B100970507 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A788DAF2BD543B100970507 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DAE2BD543B100970507 /* CommitClone.app */,
+				7A788DC72BD543B300970507 /* CommitCloneTests.xctest */,
+				7A788DD12BD543B300970507 /* CommitCloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A788DB02BD543B100970507 /* CommitClone */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DC22BD543B300970507 /* Info.plist */,
+				7A788DE42BD5444500970507 /* Application */,
+				7A788DE72BD5446C00970507 /* Protocols */,
+				7A788DEE2BD544BE00970507 /* Router */,
+				7A788DF32BD544F600970507 /* Model */,
+				7A788DF42BD5450100970507 /* Factories */,
+				7A788E032BD546DA00970507 /* Base */,
+				7A788E062BD5470900970507 /* Flows */,
+				7A788DF52BD5450900970507 /* Assets */,
+			);
+			path = CommitClone;
+			sourceTree = "<group>";
+		};
+		7A788DCA2BD543B300970507 /* CommitCloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DCB2BD543B300970507 /* CommitCloneTests.swift */,
+			);
+			path = CommitCloneTests;
+			sourceTree = "<group>";
+		};
+		7A788DD42BD543B300970507 /* CommitCloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DD52BD543B300970507 /* CommitCloneUITests.swift */,
+				7A788DD72BD543B300970507 /* CommitCloneUITestsLaunchTests.swift */,
+			);
+			path = CommitCloneUITests;
+			sourceTree = "<group>";
+		};
+		7A788DE42BD5444500970507 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DB12BD543B100970507 /* AppDelegate.swift */,
+				7A788DE52BD5445400970507 /* ApplicationCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7A788DE72BD5446C00970507 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DE82BD5447800970507 /* Protocol.swift */,
+				7A788DEA2BD5448D00970507 /* Presentable.swift */,
+				7A788DEC2BD544AE00970507 /* BaseView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7A788DEE2BD544BE00970507 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DEF2BD544CB00970507 /* Router.swift */,
+				7A788DF12BD544DB00970507 /* RouterImp.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7A788DF32BD544F600970507 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A788DF42BD5450100970507 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DF62BD5453800970507 /* Imp */,
+				7A788DF72BD5454300970507 /* CoordinatorFactory.swift */,
+				7A788DFB2BD5458B00970507 /* AllDaysModuleFactory.swift */,
+				7A788DFD2BD5459300970507 /* TodayModuleFactory.swift */,
+				7A788DF92BD5458000970507 /* SettingsModuleFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		7A788DF52BD5450900970507 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DBA2BD543B100970507 /* CommitClone.xcdatamodeld */,
+				7A788DBD2BD543B300970507 /* Assets.xcassets */,
+				7A788DBF2BD543B300970507 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		7A788DF62BD5453800970507 /* Imp */ = {
+			isa = PBXGroup;
+			children = (
+				7A788DFF2BD5460600970507 /* CoordinatorFactoryImp.swift */,
+				7A788E012BD546BD00970507 /* ModuleFactoryImp.swift */,
+			);
+			path = Imp;
+			sourceTree = "<group>";
+		};
+		7A788E032BD546DA00970507 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E042BD546E800970507 /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7A788E062BD5470900970507 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E072BD5471200970507 /* MainTabbarFlow */,
+				7A788E0E2BD5475D00970507 /* AllDaysFlow */,
+				7A788E0F2BD5476C00970507 /* TodayFlow */,
+				7A788E102BD5478000970507 /* SettingsFlow */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		7A788E072BD5471200970507 /* MainTabbarFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E082BD5471F00970507 /* TabbarCoordinator.swift */,
+				7A788E0A2BD5473400970507 /* TabbarView.swift */,
+				7A788E0C2BD5474900970507 /* TabbarController.swift */,
+			);
+			path = MainTabbarFlow;
+			sourceTree = "<group>";
+		};
+		7A788E0E2BD5475D00970507 /* AllDaysFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E112BD5479300970507 /* AllDaysCoordinator.swift */,
+				7A788E132BD5479C00970507 /* AllDaysView.swift */,
+				7A788E152BD547A300970507 /* AllDaysController.swift */,
+			);
+			path = AllDaysFlow;
+			sourceTree = "<group>";
+		};
+		7A788E0F2BD5476C00970507 /* TodayFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E172BD548B200970507 /* TodayCoordinator.swift */,
+				7A788E192BD548B800970507 /* TodayView.swift */,
+				7A788E1B2BD548BF00970507 /* TodayController.swift */,
+			);
+			path = TodayFlow;
+			sourceTree = "<group>";
+		};
+		7A788E102BD5478000970507 /* SettingsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E212BD548D800970507 /* SettingsCoordinator.swift */,
+				7A788E1F2BD548D100970507 /* SettingsController.swift */,
+				7A788E1D2BD548C700970507 /* SettingsView.swift */,
+			);
+			path = SettingsFlow;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A788DAD2BD543B100970507 /* CommitClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A788DDB2BD543B300970507 /* Build configuration list for PBXNativeTarget "CommitClone" */;
+			buildPhases = (
+				7A788DAA2BD543B100970507 /* Sources */,
+				7A788DAB2BD543B100970507 /* Frameworks */,
+				7A788DAC2BD543B100970507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommitClone;
+			productName = CommitClone;
+			productReference = 7A788DAE2BD543B100970507 /* CommitClone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7A788DC62BD543B300970507 /* CommitCloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A788DDE2BD543B300970507 /* Build configuration list for PBXNativeTarget "CommitCloneTests" */;
+			buildPhases = (
+				7A788DC32BD543B300970507 /* Sources */,
+				7A788DC42BD543B300970507 /* Frameworks */,
+				7A788DC52BD543B300970507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A788DC92BD543B300970507 /* PBXTargetDependency */,
+			);
+			name = CommitCloneTests;
+			productName = CommitCloneTests;
+			productReference = 7A788DC72BD543B300970507 /* CommitCloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7A788DD02BD543B300970507 /* CommitCloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A788DE12BD543B300970507 /* Build configuration list for PBXNativeTarget "CommitCloneUITests" */;
+			buildPhases = (
+				7A788DCD2BD543B300970507 /* Sources */,
+				7A788DCE2BD543B300970507 /* Frameworks */,
+				7A788DCF2BD543B300970507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A788DD32BD543B300970507 /* PBXTargetDependency */,
+			);
+			name = CommitCloneUITests;
+			productName = CommitCloneUITests;
+			productReference = 7A788DD12BD543B300970507 /* CommitCloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A788DA62BD543B100970507 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					7A788DAD2BD543B100970507 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					7A788DC62BD543B300970507 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 7A788DAD2BD543B100970507;
+					};
+					7A788DD02BD543B300970507 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 7A788DAD2BD543B100970507;
+					};
+				};
+			};
+			buildConfigurationList = 7A788DA92BD543B100970507 /* Build configuration list for PBXProject "CommitClone" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A788DA52BD543B100970507;
+			productRefGroup = 7A788DAF2BD543B100970507 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A788DAD2BD543B100970507 /* CommitClone */,
+				7A788DC62BD543B300970507 /* CommitCloneTests */,
+				7A788DD02BD543B300970507 /* CommitCloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A788DAC2BD543B100970507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A788DC12BD543B300970507 /* LaunchScreen.storyboard in Resources */,
+				7A788DBE2BD543B300970507 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A788DC52BD543B300970507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A788DCF2BD543B300970507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A788DAA2BD543B100970507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A788DB22BD543B100970507 /* AppDelegate.swift in Sources */,
+				7A788E002BD5460600970507 /* CoordinatorFactoryImp.swift in Sources */,
+				7A788E092BD5471F00970507 /* TabbarCoordinator.swift in Sources */,
+				7A788DF22BD544DB00970507 /* RouterImp.swift in Sources */,
+				7A788E022BD546BD00970507 /* ModuleFactoryImp.swift in Sources */,
+				7A788E1C2BD548BF00970507 /* TodayController.swift in Sources */,
+				7A788E1A2BD548B800970507 /* TodayView.swift in Sources */,
+				7A788DBC2BD543B100970507 /* CommitClone.xcdatamodeld in Sources */,
+				7A788DE62BD5445400970507 /* ApplicationCoordinator.swift in Sources */,
+				7A788DF02BD544CB00970507 /* Router.swift in Sources */,
+				7A788DFA2BD5458000970507 /* SettingsModuleFactory.swift in Sources */,
+				7A788E142BD5479C00970507 /* AllDaysView.swift in Sources */,
+				7A788DED2BD544AE00970507 /* BaseView.swift in Sources */,
+				7A788E162BD547A300970507 /* AllDaysController.swift in Sources */,
+				7A788E202BD548D100970507 /* SettingsController.swift in Sources */,
+				7A788DF82BD5454300970507 /* CoordinatorFactory.swift in Sources */,
+				7A788E1E2BD548C700970507 /* SettingsView.swift in Sources */,
+				7A788E052BD546E800970507 /* BaseCoordinator.swift in Sources */,
+				7A788E0B2BD5473400970507 /* TabbarView.swift in Sources */,
+				7A788DE92BD5447800970507 /* Protocol.swift in Sources */,
+				7A788E182BD548B200970507 /* TodayCoordinator.swift in Sources */,
+				7A788E122BD5479300970507 /* AllDaysCoordinator.swift in Sources */,
+				7A788E222BD548D800970507 /* SettingsCoordinator.swift in Sources */,
+				7A788E0D2BD5474900970507 /* TabbarController.swift in Sources */,
+				7A788DFC2BD5458B00970507 /* AllDaysModuleFactory.swift in Sources */,
+				7A788DFE2BD5459300970507 /* TodayModuleFactory.swift in Sources */,
+				7A788DEB2BD5448D00970507 /* Presentable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A788DC32BD543B300970507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A788DCC2BD543B300970507 /* CommitCloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A788DCD2BD543B300970507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A788DD62BD543B300970507 /* CommitCloneUITests.swift in Sources */,
+				7A788DD82BD543B300970507 /* CommitCloneUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A788DC92BD543B300970507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A788DAD2BD543B100970507 /* CommitClone */;
+			targetProxy = 7A788DC82BD543B300970507 /* PBXContainerItemProxy */;
+		};
+		7A788DD32BD543B300970507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A788DAD2BD543B100970507 /* CommitClone */;
+			targetProxy = 7A788DD22BD543B300970507 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7A788DBF2BD543B300970507 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A788DC02BD543B300970507 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A788DD92BD543B300970507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A788DDA2BD543B300970507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A788DDC2BD543B300970507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A6SAQ5UGJF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CommitClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "qpia-ios.CommitClone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A788DDD2BD543B300970507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A6SAQ5UGJF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CommitClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "qpia-ios.CommitClone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A788DDF2BD543B300970507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A6SAQ5UGJF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "qpia-ios.CommitCloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommitClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CommitClone";
+			};
+			name = Debug;
+		};
+		7A788DE02BD543B300970507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A6SAQ5UGJF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "qpia-ios.CommitCloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommitClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CommitClone";
+			};
+			name = Release;
+		};
+		7A788DE22BD543B300970507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A6SAQ5UGJF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "qpia-ios.CommitCloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CommitClone;
+			};
+			name = Debug;
+		};
+		7A788DE32BD543B300970507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A6SAQ5UGJF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "qpia-ios.CommitCloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CommitClone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A788DA92BD543B100970507 /* Build configuration list for PBXProject "CommitClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A788DD92BD543B300970507 /* Debug */,
+				7A788DDA2BD543B300970507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A788DDB2BD543B300970507 /* Build configuration list for PBXNativeTarget "CommitClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A788DDC2BD543B300970507 /* Debug */,
+				7A788DDD2BD543B300970507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A788DDE2BD543B300970507 /* Build configuration list for PBXNativeTarget "CommitCloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A788DDF2BD543B300970507 /* Debug */,
+				7A788DE02BD543B300970507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A788DE12BD543B300970507 /* Build configuration list for PBXNativeTarget "CommitCloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A788DE22BD543B300970507 /* Debug */,
+				7A788DE32BD543B300970507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A788DBA2BD543B100970507 /* CommitClone.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A788DBB2BD543B100970507 /* CommitClone.xcdatamodel */,
+			);
+			currentVersion = 7A788DBB2BD543B100970507 /* CommitClone.xcdatamodel */;
+			path = CommitClone.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7A788DA62BD543B100970507 /* Project object */;
+}

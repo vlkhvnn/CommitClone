@@ -8,5 +8,7 @@
 import Foundation
 
 protocol AllDaysModuleFactory {
-    func makeAllDaysOutput() -> AllDaysView
+    func makeAllDaysOutput() -> AllDaysViewProtocol
+    func makeAddHabitOutput() -> AddHabitView
+    func makeAllHabitsOutput() -> AllHabitsView
 }

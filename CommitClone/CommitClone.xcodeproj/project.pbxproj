@@ -15,7 +15,7 @@
 		7A788DD62BD543B300970507 /* CommitCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DD52BD543B300970507 /* CommitCloneUITests.swift */; };
 		7A788DD82BD543B300970507 /* CommitCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DD72BD543B300970507 /* CommitCloneUITestsLaunchTests.swift */; };
 		7A788DE62BD5445400970507 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DE52BD5445400970507 /* ApplicationCoordinator.swift */; };
-		7A788DE92BD5447800970507 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DE82BD5447800970507 /* Protocol.swift */; };
+		7A788DE92BD5447800970507 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DE82BD5447800970507 /* Coordinator.swift */; };
 		7A788DEB2BD5448D00970507 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DEA2BD5448D00970507 /* Presentable.swift */; };
 		7A788DED2BD544AE00970507 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DEC2BD544AE00970507 /* BaseView.swift */; };
 		7A788DF02BD544CB00970507 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788DEF2BD544CB00970507 /* Router.swift */; };
@@ -39,6 +39,26 @@
 		7A788E1E2BD548C700970507 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E1D2BD548C700970507 /* SettingsView.swift */; };
 		7A788E202BD548D100970507 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E1F2BD548D100970507 /* SettingsController.swift */; };
 		7A788E222BD548D800970507 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E212BD548D800970507 /* SettingsCoordinator.swift */; };
+		7A788E242BDBBD0C00970507 /* AddHabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E232BDBBD0C00970507 /* AddHabitController.swift */; };
+		7A788E262BDBBD1400970507 /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E252BDBBD1400970507 /* AddHabitView.swift */; };
+		7A788E2A2BDBCD2800970507 /* AllHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E292BDBCD2800970507 /* AllHabitsView.swift */; };
+		7A788E2C2BDBCD3100970507 /* AllHabitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E2B2BDBCD3100970507 /* AllHabitsController.swift */; };
+		7A788E2F2BDBCD9700970507 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E2E2BDBCD9700970507 /* AppColor.swift */; };
+		7A788E312BDBCD9D00970507 /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E302BDBCD9D00970507 /* AppImage.swift */; };
+		7A788E342BDBD09000970507 /* CalSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A788E332BDBD09000970507 /* CalSans-SemiBold.otf */; };
+		7A788E352BDBD09000970507 /* CalSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A788E332BDBD09000970507 /* CalSans-SemiBold.otf */; };
+		7A788E362BDBD09000970507 /* CalSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A788E332BDBD09000970507 /* CalSans-SemiBold.otf */; };
+		7A788E382BDBD22000970507 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E372BDBD22000970507 /* Typealias.swift */; };
+		7A788E392BDBD22000970507 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E372BDBD22000970507 /* Typealias.swift */; };
+		7A788E3A2BDBD22000970507 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E372BDBD22000970507 /* Typealias.swift */; };
+		7A788E3D2BDBD43B00970507 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7A788E3C2BDBD43B00970507 /* SnapKit */; };
+		7A788E3F2BDBD43B00970507 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7A788E3E2BDBD43B00970507 /* SnapKit-Dynamic */; };
+		7A788E412BDC1F0200970507 /* HabitsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E402BDC1F0200970507 /* HabitsCollectionViewCell.swift */; };
+		7A788E422BDC1F0200970507 /* HabitsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E402BDC1F0200970507 /* HabitsCollectionViewCell.swift */; };
+		7A788E432BDC1F0200970507 /* HabitsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E402BDC1F0200970507 /* HabitsCollectionViewCell.swift */; };
+		7A788E452BDC217E00970507 /* GenericVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E442BDC217E00970507 /* GenericVC.swift */; };
+		7A788E462BDC217E00970507 /* GenericVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E442BDC217E00970507 /* GenericVC.swift */; };
+		7A788E472BDC217E00970507 /* GenericVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E442BDC217E00970507 /* GenericVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +91,7 @@
 		7A788DD52BD543B300970507 /* CommitCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCloneUITests.swift; sourceTree = "<group>"; };
 		7A788DD72BD543B300970507 /* CommitCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A788DE52BD5445400970507 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		7A788DE82BD5447800970507 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		7A788DE82BD5447800970507 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7A788DEA2BD5448D00970507 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		7A788DEC2BD544AE00970507 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		7A788DEF2BD544CB00970507 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -95,6 +115,16 @@
 		7A788E1D2BD548C700970507 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7A788E1F2BD548D100970507 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		7A788E212BD548D800970507 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		7A788E232BDBBD0C00970507 /* AddHabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitController.swift; sourceTree = "<group>"; };
+		7A788E252BDBBD1400970507 /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		7A788E292BDBCD2800970507 /* AllHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHabitsView.swift; sourceTree = "<group>"; };
+		7A788E2B2BDBCD3100970507 /* AllHabitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHabitsController.swift; sourceTree = "<group>"; };
+		7A788E2E2BDBCD9700970507 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		7A788E302BDBCD9D00970507 /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		7A788E332BDBD09000970507 /* CalSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CalSans-SemiBold.otf"; sourceTree = "<group>"; };
+		7A788E372BDBD22000970507 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		7A788E402BDC1F0200970507 /* HabitsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A788E442BDC217E00970507 /* GenericVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A788E3D2BDBD43B00970507 /* SnapKit in Frameworks */,
+				7A788E3F2BDBD43B00970507 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +179,7 @@
 			children = (
 				7A788DC22BD543B300970507 /* Info.plist */,
 				7A788DE42BD5444500970507 /* Application */,
+				7A788E2D2BDBCD7500970507 /* CommonUI */,
 				7A788DE72BD5446C00970507 /* Protocols */,
 				7A788DEE2BD544BE00970507 /* Router */,
 				7A788DF32BD544F600970507 /* Model */,
@@ -180,6 +213,8 @@
 			children = (
 				7A788DB12BD543B100970507 /* AppDelegate.swift */,
 				7A788DE52BD5445400970507 /* ApplicationCoordinator.swift */,
+				7A788E372BDBD22000970507 /* Typealias.swift */,
+				7A788E442BDC217E00970507 /* GenericVC.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -187,7 +222,7 @@
 		7A788DE72BD5446C00970507 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				7A788DE82BD5447800970507 /* Protocol.swift */,
+				7A788DE82BD5447800970507 /* Coordinator.swift */,
 				7A788DEA2BD5448D00970507 /* Presentable.swift */,
 				7A788DEC2BD544AE00970507 /* BaseView.swift */,
 			);
@@ -225,6 +260,7 @@
 		7A788DF52BD5450900970507 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7A788E322BDBD06200970507 /* Fonts */,
 				7A788DBA2BD543B100970507 /* CommitClone.xcdatamodeld */,
 				7A788DBD2BD543B300970507 /* Assets.xcassets */,
 				7A788DBF2BD543B300970507 /* LaunchScreen.storyboard */,
@@ -276,6 +312,9 @@
 				7A788E112BD5479300970507 /* AllDaysCoordinator.swift */,
 				7A788E132BD5479C00970507 /* AllDaysView.swift */,
 				7A788E152BD547A300970507 /* AllDaysController.swift */,
+				7A788E402BDC1F0200970507 /* HabitsCollectionViewCell.swift */,
+				7A788E282BDBCD1D00970507 /* AllHabits */,
+				7A788E272BDBBD1900970507 /* AddHabit */,
 			);
 			path = AllDaysFlow;
 			sourceTree = "<group>";
@@ -294,10 +333,45 @@
 			isa = PBXGroup;
 			children = (
 				7A788E212BD548D800970507 /* SettingsCoordinator.swift */,
-				7A788E1F2BD548D100970507 /* SettingsController.swift */,
 				7A788E1D2BD548C700970507 /* SettingsView.swift */,
+				7A788E1F2BD548D100970507 /* SettingsController.swift */,
 			);
 			path = SettingsFlow;
+			sourceTree = "<group>";
+		};
+		7A788E272BDBBD1900970507 /* AddHabit */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E232BDBBD0C00970507 /* AddHabitController.swift */,
+				7A788E252BDBBD1400970507 /* AddHabitView.swift */,
+			);
+			path = AddHabit;
+			sourceTree = "<group>";
+		};
+		7A788E282BDBCD1D00970507 /* AllHabits */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E292BDBCD2800970507 /* AllHabitsView.swift */,
+				7A788E2B2BDBCD3100970507 /* AllHabitsController.swift */,
+			);
+			path = AllHabits;
+			sourceTree = "<group>";
+		};
+		7A788E2D2BDBCD7500970507 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E2E2BDBCD9700970507 /* AppColor.swift */,
+				7A788E302BDBCD9D00970507 /* AppImage.swift */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		7A788E322BDBD06200970507 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7A788E332BDBD09000970507 /* CalSans-SemiBold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +390,10 @@
 			dependencies = (
 			);
 			name = CommitClone;
+			packageProductDependencies = (
+				7A788E3C2BDBD43B00970507 /* SnapKit */,
+				7A788E3E2BDBD43B00970507 /* SnapKit-Dynamic */,
+			);
 			productName = CommitClone;
 			productReference = 7A788DAE2BD543B100970507 /* CommitClone.app */;
 			productType = "com.apple.product-type.application";
@@ -388,6 +466,9 @@
 				Base,
 			);
 			mainGroup = 7A788DA52BD543B100970507;
+			packageReferences = (
+				7A788E3B2BDBD43B00970507 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 7A788DAF2BD543B100970507 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A788E342BDBD09000970507 /* CalSans-SemiBold.otf in Resources */,
 				7A788DC12BD543B300970507 /* LaunchScreen.storyboard in Resources */,
 				7A788DBE2BD543B300970507 /* Assets.xcassets in Resources */,
 			);
@@ -413,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A788E352BDBD09000970507 /* CalSans-SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A788E362BDBD09000970507 /* CalSans-SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,21 +523,30 @@
 				7A788E1A2BD548B800970507 /* TodayView.swift in Sources */,
 				7A788DBC2BD543B100970507 /* CommitClone.xcdatamodeld in Sources */,
 				7A788DE62BD5445400970507 /* ApplicationCoordinator.swift in Sources */,
+				7A788E2F2BDBCD9700970507 /* AppColor.swift in Sources */,
 				7A788DF02BD544CB00970507 /* Router.swift in Sources */,
 				7A788DFA2BD5458000970507 /* SettingsModuleFactory.swift in Sources */,
+				7A788E2A2BDBCD2800970507 /* AllHabitsView.swift in Sources */,
+				7A788E262BDBBD1400970507 /* AddHabitView.swift in Sources */,
+				7A788E412BDC1F0200970507 /* HabitsCollectionViewCell.swift in Sources */,
+				7A788E2C2BDBCD3100970507 /* AllHabitsController.swift in Sources */,
 				7A788E142BD5479C00970507 /* AllDaysView.swift in Sources */,
 				7A788DED2BD544AE00970507 /* BaseView.swift in Sources */,
 				7A788E162BD547A300970507 /* AllDaysController.swift in Sources */,
 				7A788E202BD548D100970507 /* SettingsController.swift in Sources */,
 				7A788DF82BD5454300970507 /* CoordinatorFactory.swift in Sources */,
+				7A788E242BDBBD0C00970507 /* AddHabitController.swift in Sources */,
 				7A788E1E2BD548C700970507 /* SettingsView.swift in Sources */,
 				7A788E052BD546E800970507 /* BaseCoordinator.swift in Sources */,
+				7A788E452BDC217E00970507 /* GenericVC.swift in Sources */,
 				7A788E0B2BD5473400970507 /* TabbarView.swift in Sources */,
-				7A788DE92BD5447800970507 /* Protocol.swift in Sources */,
+				7A788DE92BD5447800970507 /* Coordinator.swift in Sources */,
 				7A788E182BD548B200970507 /* TodayCoordinator.swift in Sources */,
 				7A788E122BD5479300970507 /* AllDaysCoordinator.swift in Sources */,
 				7A788E222BD548D800970507 /* SettingsCoordinator.swift in Sources */,
 				7A788E0D2BD5474900970507 /* TabbarController.swift in Sources */,
+				7A788E312BDBCD9D00970507 /* AppImage.swift in Sources */,
+				7A788E382BDBD22000970507 /* Typealias.swift in Sources */,
 				7A788DFC2BD5458B00970507 /* AllDaysModuleFactory.swift in Sources */,
 				7A788DFE2BD5459300970507 /* TodayModuleFactory.swift in Sources */,
 				7A788DEB2BD5448D00970507 /* Presentable.swift in Sources */,
@@ -464,6 +557,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A788E462BDC217E00970507 /* GenericVC.swift in Sources */,
+				7A788E422BDC1F0200970507 /* HabitsCollectionViewCell.swift in Sources */,
+				7A788E392BDBD22000970507 /* Typealias.swift in Sources */,
 				7A788DCC2BD543B300970507 /* CommitCloneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +569,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A788DD62BD543B300970507 /* CommitCloneUITests.swift in Sources */,
+				7A788E3A2BDBD22000970507 /* Typealias.swift in Sources */,
 				7A788DD82BD543B300970507 /* CommitCloneUITestsLaunchTests.swift in Sources */,
+				7A788E432BDC1F0200970507 /* HabitsCollectionViewCell.swift in Sources */,
+				7A788E472BDC217E00970507 /* GenericVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,6 +892,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A788E3B2BDBD43B00970507 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A788E3C2BDBD43B00970507 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A788E3B2BDBD43B00970507 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7A788E3E2BDBD43B00970507 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A788E3B2BDBD43B00970507 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7A788DBA2BD543B100970507 /* CommitClone.xcdatamodeld */ = {

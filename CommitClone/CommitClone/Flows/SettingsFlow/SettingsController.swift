@@ -10,6 +10,6 @@ import UIKit
 final class SettingsController : UIViewController, SettingsView {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = AppColor.background.uiColor
     }
 }

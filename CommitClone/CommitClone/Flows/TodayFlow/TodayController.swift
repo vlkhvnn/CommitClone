@@ -11,6 +11,6 @@ final class TodayController : UIViewController, TodayView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brown
+        view.backgroundColor = AppColor.background.uiColor
     }
 }

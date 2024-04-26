@@ -14,14 +14,12 @@ final class TabbarController: UITabBarController, TabbarView {
     var onSettingsFlowSelect: ((UINavigationController) -> ())?
     var onViewDidLoad: ((UINavigationController) -> ())?
     
-    private let images = [("square.grid.3x3", "square.grid.3x3.fill"),
-                          ("square", "square.fill"),
-                          ("gearshape", "gearshape.fill")]
+    private let moduleFactory = ModuleFactoryImp()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor(named: "background-color")
+        view.backgroundColor = AppColor.background.uiColor
                   
         configureTabBar()
         navigationItem.hidesBackButton = true
@@ -32,47 +30,40 @@ final class TabbarController: UITabBarController, TabbarView {
     private func configureTabBar() {
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = .lightGray
-        tabBar.backgroundColor = UIColor(named: "background-color")
-        modalPresentationStyle = .fullScreen
-        
+        tabBar.backgroundColor = AppColor.background.uiColor
         let systemFontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0)]
         UITabBarItem.appearance().setTitleTextAttributes(systemFontAttributes, for: .normal)
-    }
-
-    private func setImagesToTabBar() {
-        setImage(to: 0, fill: true)
-        setImage(to: 1, fill: false)
-        setImage(to: 2, fill: false)
-    }
-    
-    func setImage(to index: Int, fill: Bool) {
-        guard let items = tabBar.items else {
-            return
-        }
-        
-        if fill {
-            items[index].image = UIImage(systemName: images[index].1)
-        } else {
-            items[index].image = UIImage(systemName: images[index].0)
-        }
     }
     
     private func setupTabBar() {
         // Instantiate the view controllers for each tab and assign them to the tab bar
-        let allDaysController = UINavigationController(rootViewController: AllDaysController())
         
-        let todayController = UINavigationController(rootViewController: TodayController())
+        let vc1 = moduleFactory.makeAllDaysOutput() as! UIViewController
+        let vc2 = moduleFactory.makeTodayOutput() as! UIViewController
+        let vc3 = moduleFactory.makeSettingsOutput() as! UIViewController
+        
+        vc1.tabBarItem = UITabBarItem(title: "all",
+                                      image: AppImage.allDays.systemImage,
+                                      tag: 0)
+        vc1.tabBarItem.selectedImage = AppImage.allDaysSelected.systemImage
+        vc2.tabBarItem = UITabBarItem(title: "today",
+                                      image: AppImage.today.systemImage,
+                                      tag: 1)
+        vc2.tabBarItem.selectedImage = AppImage.todaySelected.systemImage
+        vc3.tabBarItem = UITabBarItem(title: "settings",
+                                      image: AppImage.settings.systemImage,
+                                      tag: 2)
+        vc3.tabBarItem.selectedImage = AppImage.settingsSelected.systemImage
+        
+        let controllers = [vc1, vc2, vc3]
 
-        let settingsViewController = UINavigationController(rootViewController: SettingsController())
-
-        self.viewControllers = [allDaysController, todayController,settingsViewController]
-
-        self.selectedIndex = 0
+        self.viewControllers = controllers.map {
+            UINavigationController(rootViewController: $0)
+        }
 
         if let controller = customizableViewControllers?.first as? UINavigationController {
             onViewDidLoad?(controller)
         }
-        setImagesToTabBar()
     }
     
     
@@ -85,16 +76,12 @@ extension TabbarController: UITabBarControllerDelegate {
         switch selectedIndex {
         case 0:
             onAllDaysFlowSelect?(controller)
-            setImage(to: 0, fill: true)
         case 1:
             onTodayFlowSelect?(controller)
-            setImage(to: 1, fill: true)
         case 2:
             onSettingsFlowSelect?(controller)
-            setImage(to: 2, fill: true)
         default:
             onAllDaysFlowSelect?(controller)
-            setImage(to: 0, fill: true)
         }
     }
 }

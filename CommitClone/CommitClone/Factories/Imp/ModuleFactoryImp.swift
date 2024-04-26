@@ -8,15 +8,28 @@
 import Foundation
 
 final class ModuleFactoryImp : AllDaysModuleFactory, TodayModuleFactory, SettingsModuleFactory {
-    func makeAllDaysOutput() -> AllDaysView {
-        return AllDaysController()
+    func makeAllHabitsOutput() -> AllHabitsView {
+        let vc = AllHabitsController()
+        return vc
+    }
+    
+    func makeAddHabitOutput() -> AddHabitView {
+        let vc = AddHabitController()
+        return vc
+    }
+    
+    func makeAllDaysOutput() -> AllDaysViewProtocol {
+        let vc = AllDaysController()
+        return vc
     }
     
     func makeTodayOutput() -> TodayView {
-        return TodayController()
+        let vc = TodayController()
+        return vc
     }
     
     func makeSettingsOutput() -> SettingsView {
-        return SettingsController()
+        let vc = SettingsController()
+        return vc
     }
 }

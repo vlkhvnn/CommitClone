@@ -313,8 +313,8 @@
 				7A788E132BD5479C00970507 /* AllDaysView.swift */,
 				7A788E152BD547A300970507 /* AllDaysController.swift */,
 				7A788E402BDC1F0200970507 /* HabitsCollectionViewCell.swift */,
-				7A788E282BDBCD1D00970507 /* AllHabits */,
 				7A788E272BDBBD1900970507 /* AddHabit */,
+				7A788E282BDBCD1D00970507 /* AllHabits */,
 			);
 			path = AllDaysFlow;
 			sourceTree = "<group>";
@@ -342,8 +342,8 @@
 		7A788E272BDBBD1900970507 /* AddHabit */ = {
 			isa = PBXGroup;
 			children = (
-				7A788E232BDBBD0C00970507 /* AddHabitController.swift */,
 				7A788E252BDBBD1400970507 /* AddHabitView.swift */,
+				7A788E232BDBBD0C00970507 /* AddHabitController.swift */,
 			);
 			path = AddHabit;
 			sourceTree = "<group>";

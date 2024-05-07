@@ -13,8 +13,6 @@ final class AllDaysController : GenericVC<AllDaysView>, AllDaysViewProtocol {
     var onAllHabits: Callback?
     var onAddHabit: Callback?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

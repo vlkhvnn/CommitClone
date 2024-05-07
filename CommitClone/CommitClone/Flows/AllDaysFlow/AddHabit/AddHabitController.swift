@@ -7,6 +7,14 @@
 
 import UIKit
 
-final class AddHabitController : UIViewController, AddHabitView {
+final class AddHabitController : GenericVC<AddHabitView>, AddHabitViewProtocol {
+    
+    var confirmedHabit: Callback?
+    var goBack: Callback?
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
 }

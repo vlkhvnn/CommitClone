@@ -8,47 +8,47 @@
 import UIKit
 
 final class CoordinatorFactoryImp: CoordinatorFactory {
-    
-    func makeTabbarCoordinator() -> (configurator: Coordinator, toPresent: Presentable?) {
-        let controller = TabbarController()
-        let coordinator = TabbarCoordinator(tabbarView: controller, coordinatorFactory: CoordinatorFactoryImp())
-        return (coordinator, controller)
+    func makeTabbarCoordinator(router: Router) -> TabbarCoordinator {
+        let coordinator = TabbarCoordinator(coordinatorFactory: CoordinatorFactoryImp(), router: router)
+        return coordinator
     }
     
-    func makeAllDaysCoordinator(navController: UINavigationController?) -> Coordinator {
+    
+    private let moduleFactory = ModuleFactoryImp()
+    
+    func makeAllDaysCoordinator(navController: UINavigationController?) -> AllDaysCoordinator {
         let coordinator = AllDaysCoordinator(router: router(navController),
-                                             factory: ModuleFactoryImp(),
+                                             factory: moduleFactory,
                                              coordinatorFactory: CoordinatorFactoryImp()
         )
         return coordinator
     }
     
-    func makeAllDaysCoordinator() -> Coordinator {
+    func makeAllDaysCoordinator() -> AllDaysCoordinator {
         return makeAllDaysCoordinator(navController: nil)
     }
     
-    func makeTodayCoordinator(navController: UINavigationController?) -> Coordinator {
+    func makeTodayCoordinator(navController: UINavigationController?) -> TodayCoordinator {
         let coordinator = TodayCoordinator(router: router(navController),
-                                           factory: ModuleFactoryImp(),
+                                           factory: moduleFactory,
                                            coordinatorFactory: CoordinatorFactoryImp()
         )
         return coordinator
     }
     
-    func makeTodayCoordinator() -> Coordinator {
+    func makeTodayCoordinator() -> TodayCoordinator {
         return makeTodayCoordinator(navController: nil)
     }
     
     
     
-    func makeSettingsCoordinator() -> Coordinator {
+    func makeSettingsCoordinator() -> SettingsCoordinator {
         return makeSettingsCoordinator(navController: nil)
     }
     
-    func makeSettingsCoordinator(navController: UINavigationController? = nil) -> Coordinator {
-        let coordinator = SettingsCoordinator(router: router(navController), 
-                                              factory: ModuleFactoryImp()
-        )
+    func makeSettingsCoordinator(navController: UINavigationController? = nil) -> SettingsCoordinator {
+        let coordinator = SettingsCoordinator(router: router(navController),
+                                              factory: moduleFactory)
         return coordinator
     }
     

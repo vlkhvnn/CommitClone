@@ -9,16 +9,16 @@ import UIKit
 
 protocol CoordinatorFactory {
     
-    func makeTabbarCoordinator() -> (configurator: Coordinator, toPresent: Presentable?)
+    func makeTabbarCoordinator(router: Router) -> TabbarCoordinator
     
-    func makeAllDaysCoordinator(navController: UINavigationController?) -> Coordinator
-    func makeAllDaysCoordinator() -> Coordinator
+    func makeAllDaysCoordinator(navController: UINavigationController?) -> AllDaysCoordinator
+    func makeAllDaysCoordinator() -> AllDaysCoordinator
     
-    func makeTodayCoordinator(navController: UINavigationController?) -> Coordinator
-    func makeTodayCoordinator() -> Coordinator
+    func makeTodayCoordinator(navController: UINavigationController?) -> TodayCoordinator
+    func makeTodayCoordinator() -> TodayCoordinator
     
-    func makeSettingsCoordinator() -> Coordinator
-    func makeSettingsCoordinator(navController: UINavigationController?) -> Coordinator
+    func makeSettingsCoordinator() -> SettingsCoordinator
+    func makeSettingsCoordinator(navController: UINavigationController?) -> SettingsCoordinator
     
 }
 

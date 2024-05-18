@@ -19,13 +19,19 @@ final class TodayCoordinator : BaseCoordinator {
     }
     
     override func start() {
-        showToday()
+        let vc = self.factory.makeTodayOutput()
+        showTodayVC(vc: vc)
     }
     
     //MARK: - Run current flow's controllers
     
-    private func showToday() {
-        let todayFlowOutput = factory.makeTodayOutput()
-        router.setRootModule(todayFlowOutput)
+    private func showTodayVC(vc : TodayViewProtocol) {
+        router.setRootModule(vc)
+    }
+    
+    func startAndReturnVC() -> TodayViewProtocol{
+        let vc = factory.makeTodayOutput()
+        showTodayVC(vc: vc)
+        return vc
     }
 }

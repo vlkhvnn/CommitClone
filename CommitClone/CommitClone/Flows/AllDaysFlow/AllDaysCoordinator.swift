@@ -20,13 +20,19 @@ final class AllDaysCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        showAllDays()
+        let vc = factory.makeAllDaysOutput()
+        showAllDays(vc: vc)
     }
     
     //MARK: - Run current flow's controllers
     
-    private func showAllDays() {
-        let allDaysFlowOutput = factory.makeAllDaysOutput()
-        router.setRootModule(allDaysFlowOutput)
+    func startAndReturnVC() -> AllDaysViewProtocol {
+        let vc = factory.makeAllDaysOutput()
+        showAllDays(vc: vc)
+        return vc
+    }
+    
+    private func showAllDays(vc: AllDaysViewProtocol) {
+        router.setRootModule(vc)
     }
 }

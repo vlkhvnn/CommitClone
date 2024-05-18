@@ -59,6 +59,7 @@
 		7A788E452BDC217E00970507 /* GenericVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E442BDC217E00970507 /* GenericVC.swift */; };
 		7A788E462BDC217E00970507 /* GenericVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E442BDC217E00970507 /* GenericVC.swift */; };
 		7A788E472BDC217E00970507 /* GenericVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E442BDC217E00970507 /* GenericVC.swift */; };
+		7A788E842BF67F2000970507 /* CoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A788E832BF67F2000970507 /* CoordinatorFinishOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		7A788E372BDBD22000970507 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		7A788E402BDC1F0200970507 /* HabitsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7A788E442BDC217E00970507 /* GenericVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericVC.swift; sourceTree = "<group>"; };
+		7A788E832BF67F2000970507 /* CoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 		7A788DE72BD5446C00970507 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				7A788E832BF67F2000970507 /* CoordinatorFinishOutput.swift */,
 				7A788DE82BD5447800970507 /* Coordinator.swift */,
 				7A788DEA2BD5448D00970507 /* Presentable.swift */,
 				7A788DEC2BD544AE00970507 /* BaseView.swift */,
@@ -546,6 +549,7 @@
 				7A788E222BD548D800970507 /* SettingsCoordinator.swift in Sources */,
 				7A788E0D2BD5474900970507 /* TabbarController.swift in Sources */,
 				7A788E312BDBCD9D00970507 /* AppImage.swift in Sources */,
+				7A788E842BF67F2000970507 /* CoordinatorFinishOutput.swift in Sources */,
 				7A788E382BDBD22000970507 /* Typealias.swift in Sources */,
 				7A788DFC2BD5458B00970507 /* AllDaysModuleFactory.swift in Sources */,
 				7A788DFE2BD5459300970507 /* TodayModuleFactory.swift in Sources */,

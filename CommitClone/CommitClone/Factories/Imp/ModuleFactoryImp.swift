@@ -13,7 +13,7 @@ final class ModuleFactoryImp : AllDaysModuleFactory, TodayModuleFactory, Setting
         return vc
     }
     
-    func makeAddHabitOutput() -> AddHabitView {
+    func makeAddHabitOutput() -> AddHabitViewProtocol {
         let vc = AddHabitController()
         return vc
     }
@@ -23,12 +23,12 @@ final class ModuleFactoryImp : AllDaysModuleFactory, TodayModuleFactory, Setting
         return vc
     }
     
-    func makeTodayOutput() -> TodayView {
+    func makeTodayOutput() -> TodayViewProtocol {
         let vc = TodayController()
         return vc
     }
     
-    func makeSettingsOutput() -> SettingsView {
+    func makeSettingsOutput() -> SettingsViewProtocol {
         let vc = SettingsController()
         return vc
     }

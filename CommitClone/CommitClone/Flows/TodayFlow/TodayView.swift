@@ -6,5 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
-protocol TodayView: BaseView { }
+protocol TodayViewProtocol: BaseView, UIViewController  { }
+
+class TodayView : UIView {
+    
+}

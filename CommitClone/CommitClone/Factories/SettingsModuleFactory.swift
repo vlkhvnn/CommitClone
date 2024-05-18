@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SettingsModuleFactory {
-    func makeSettingsOutput() -> SettingsView
+    func makeSettingsOutput() -> SettingsViewProtocol
 }

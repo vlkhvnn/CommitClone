@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TodayModuleFactory {
-    func makeTodayOutput() -> TodayView
+    func makeTodayOutput() -> TodayViewProtocol
 }

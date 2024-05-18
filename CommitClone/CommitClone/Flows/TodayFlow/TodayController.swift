@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TodayController : UIViewController, TodayView {
+final class TodayController : GenericVC<TodayView>, TodayViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()

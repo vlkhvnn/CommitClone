@@ -6,4 +6,8 @@
 //
 
 import Foundation
-protocol SettingsView: BaseView { }
+import UIKit
+
+
+protocol SettingsViewProtocol: BaseView, UIViewController { }
+

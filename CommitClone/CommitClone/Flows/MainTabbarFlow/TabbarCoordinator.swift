@@ -9,49 +9,50 @@ import UIKit
 
 final class TabbarCoordinator: BaseCoordinator {
     
-    private let tabbarView: TabbarView
     private let coordinatorFactory: CoordinatorFactory
+    private let moduleFactory = ModuleFactoryImp()
+    private let router: Router
     
-    init(tabbarView: TabbarView, coordinatorFactory: CoordinatorFactory) {
-        self.tabbarView = tabbarView
+    init(coordinatorFactory: CoordinatorFactory, router: Router) {
         self.coordinatorFactory = coordinatorFactory
+        self.router = router
     }
     
     override func start() {
-        tabbarView.onViewDidLoad = runAllDaysFlow()
-        tabbarView.onAllDaysFlowSelect = runAllDaysFlow()
-        tabbarView.onTodayFlowSelect = runTodayFlow()
-        tabbarView.onSettingsFlowSelect = runSettingsFlow()
+        showTabbarVC()
     }
     
-    private func runAllDaysFlow() -> ((UINavigationController) -> ()) {
-        return { [unowned self] navController in
-            if navController.viewControllers.isEmpty == true {
-                let allDaysCoordinator = self.coordinatorFactory.makeAllDaysCoordinator(navController: navController)
-                self.addDependency(allDaysCoordinator)
-                allDaysCoordinator.start()
-            }
-        }
-    }
-    
-    private func runTodayFlow() -> ((UINavigationController) -> ()) {
-        return { [unowned self] navController in
-            if navController.viewControllers.isEmpty == true {
-                let todayCoordinator = self.coordinatorFactory.makeTodayCoordinator(navController: navController)
-                self.addDependency(todayCoordinator)
-                todayCoordinator.start()
-            }
-        }
-    }
-    
-    private func runSettingsFlow() -> ((UINavigationController) -> ()) {
-        return { [unowned self] navController in
-            if navController.viewControllers.isEmpty == true {
-                let settingsCoordinator = self.coordinatorFactory.makeSettingsCoordinator(navController: navController)
-                self.addDependency(settingsCoordinator)
-                settingsCoordinator.start()
-            }
-        }
+    private func showTabbarVC() {
+        let tabbar = TabbarController()
+        let allDaysCoordinator = coordinatorFactory.makeAllDaysCoordinator()
+        let todayCoordinator = coordinatorFactory.makeTodayCoordinator()
+        let settingsCoordinator = coordinatorFactory.makeSettingsCoordinator()
+        
+        self.addDependency(allDaysCoordinator)
+        self.addDependency(todayCoordinator)
+        self.addDependency(settingsCoordinator)
+        
+        let allDaysVC = UINavigationController(rootViewController: allDaysCoordinator.startAndReturnVC())
+        let todayVC = UINavigationController(rootViewController: todayCoordinator.startAndReturnVC())
+        let settingsVC = UINavigationController(rootViewController: settingsCoordinator.startAndReturnVC())
+        
+        allDaysVC.tabBarItem = UITabBarItem(title: "All",
+                                            image: AppImage.allDays.systemImage,
+                                            selectedImage: AppImage.allDaysSelected.systemImage
+        )
+        todayVC.tabBarItem = UITabBarItem(title: "Today",
+                                          image: AppImage.today.systemImage,
+                                          selectedImage: AppImage.todaySelected.systemImage
+        )
+        
+        settingsVC.tabBarItem = UITabBarItem(title: "Settings",
+                                             image: AppImage.settings.systemImage,
+                                             selectedImage: AppImage.settingsSelected.systemImage
+        )
+        
+        tabbar.setupVC(with: [allDaysVC, todayVC, settingsVC])
+        router.setRootModule(tabbar, hideBar: true)
     }
 }
+
 

@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D75F9C88-EABC-4418-AF4D-009A4D2E66EB"
+            uuid = "C91D3F0F-007F-425F-8EE4-D2AAA8E6AEEC"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CommitClone/Flows/AllDaysFlow/AllDaysController.swift"
+            filePath = "CommitClone/Factories/Imp/CoordinatorFactoryImp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "setupBarButtons()"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "navigationController(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

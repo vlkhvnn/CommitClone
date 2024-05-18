@@ -1,27 +1,24 @@
-//
-//  AllDaysView.swift
-//  CommitClone
-//
-//  Created by Alikhan Tangirbergen on 21.04.2024.
-//
+// AllDaysView.swift
+// CommitClone
+// Created by Alikhan Tangirbergen on 21.04.2024.
 
 import UIKit
 import SnapKit
 
-protocol AllDaysViewProtocol: BaseView {
-    var onAllHabits : Callback? { get set }
-    var onAddHabit : Callback? {get set}
+protocol AllDaysViewProtocol: BaseView, UIViewController {
+    var onAllHabits: Callback? { get set }
+    var onAddHabit: Callback? { get set }
 }
 
-class AllDaysView : UIView {
-    let leftBarButton : UIBarButtonItem = {
-        let button = UIBarButtonItem(image: AppImage.leftBarButton.systemImage, style: .plain, target: .none, action: .none)
+class AllDaysView: UIView {
+    let leftBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: AppImage.leftBarButton.systemImage, style: .plain, target: nil, action: nil)
         button.tintColor = .white
         return button
     }()
     
-    let rightBarButton : UIBarButtonItem = {
-        let button = UIBarButtonItem(image: AppImage.rightBarButton.systemImage, style: .plain, target: .none, action: .none)
+    let rightBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: AppImage.rightBarButton.systemImage, style: .plain, target: nil, action: nil)
         button.tintColor = .white
         return button
     }()
@@ -34,9 +31,9 @@ class AllDaysView : UIView {
         return label
     }()
     
-    let habitsCollectionView : UICollectionView = {
+    let habitsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        let newCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        let newCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         newCollectionView.backgroundColor = AppColor.background.uiColor
         newCollectionView.showsVerticalScrollIndicator = false
         return newCollectionView
@@ -49,11 +46,15 @@ class AllDaysView : UIView {
         setupConstraints()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setupView() {
         [header, habitsCollectionView].forEach {
-            self.addSubview($0)
+            addSubview($0)
         }
-        self.backgroundColor = AppColor.background.uiColor
+        backgroundColor = AppColor.background.uiColor
     }
     
     private func setupCollectionView() {
@@ -76,11 +77,5 @@ class AllDaysView : UIView {
             $0.left.right.equalToSuperview().inset(16)
             $0.bottom.equalToSuperview()
         }
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError()
     }
 }
